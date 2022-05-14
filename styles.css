@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font: 'Epilogue', sans-serif;
+
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+}
+
+body {
+    width: 100vw;
+    font-family: var(--font);
+    color: var(--Almost-White);
+}
+
+/*   Main Navbar   */
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    color: var(--Almost-Black);
+}
+
+.hamburger-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/*   Main Section   */
+.main-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/*   Image Section   */
+.img-container {
+    width: 100%;
+}
+
+.mobile-hero {
+    width: 100%;
+}
+
+/*   Info Section   */
+.info-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+
+    padding: 2.5em 1em;
+}
+
+.info-container h2 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--Almost-Black);
+}
+
+.info-container p {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: var(--Medium-Gray);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-container button {
+    border: none;
+    cursor: pointer;
+    
+    font-size: 1em;
+    font-weight: 700;
+    font-family: var(--font);
+    background: var(--Almost-Black);
+    color: var(--Almost-White);
+    
+    padding: 1em 2em;
+    border-radius: 1em;
+}
+
+/*   Brands   */
+.brands-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.brands-list img {
+    display: block;
+    width: 20%;
+}
+
+/*   Sidebar   */
+/*   Modal   */
+.modal-hidden {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+
+
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-shown {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar-container-hidden {
+    background: var(--Almost-White);
+    height: 100vh;
+    width: 66.66%;
+    position: absolute;
+    right: -100%;
+
+    transition: all 0.3s ease-in;
+}
+
+.sidebar-container-shown {
+    right: 0;
+}
+
+.close-btn-bar {
+    display: flex;
+    padding: 1.5em;
+    justify-content: end;
+}
+
+.close-btn-bar button {
+    border: none;
+    background-color: transparent;
+    color: var(--Almost-Black);
+    cursor: pointer;
+}

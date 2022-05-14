@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./styles.css">
+
+		<!-- Google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet"> 
+
+		<!-- JavaScript -->
+		<script src="./index.js" defer></script>
+
+        <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    </head>
+    <body>
+		<!--Sidebar-->
+		<div class="modal-hidden">
+			<div class="sidebar-container-hidden">
+				<div class="close-btn-bar">
+					<button id="close-btn">
+						<img src="./images//icon-close-menu.svg" alt="close-menu">
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!--Navbar-->
+		<div class="main-navbar">
+			<h1>snap</h1>
+			<button class="hamburger-btn" id="hamburgerBtn">
+				<img src="./images/icon-menu.svg" alt="burger-menu-icon">
+			</button>
+		</div>
+
+		<!--Main Section-->
+		<main class="main-section">
+			<div class="img-container">
+				<img src="./images/image-hero-mobile.png" alt="mobile-main-logo" class="mobile-hero">
+			</div>
+			<div class="info-container">
+				<h2>Make remote work</h2>
+				<p>
+					Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
+				</p>
+				<div class="btn-container">
+					<button>
+						Learn more
+					</button>
+				</div>
+			</div>
+			<div class="brands-list">
+				<img src="./images/client-databiz.svg" alt="client-databiz">
+				<img src="./images/client-audiophile.svg" alt="client-audiophile">
+				<img src="./images/client-meet.svg" alt="client-meet">
+				<img src="./images/client-maker.svg" alt="client-maker">
+			</div>
+		</main>
+    </body>
+</html>
