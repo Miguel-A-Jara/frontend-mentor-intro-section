@@ -3,6 +3,8 @@
 *::after {
     margin: 0;
     padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
 }
 
 :root {
@@ -119,7 +121,6 @@ body {
 
     visibility: hidden;
     opacity: 0;
-    overflow: hidden;
     transition: all 0.3s ease-in-out;
 }
 
@@ -130,8 +131,11 @@ body {
 
 .sidebar-container-hidden {
     background: var(--Almost-White);
+    color: var(--Medium-Gray);
+    padding: 1.5em;
+    width: 66.66vw;
     height: 100vh;
-    width: 66.66%;
+    
     position: absolute;
     right: -100%;
 
@@ -144,7 +148,6 @@ body {
 
 .close-btn-bar {
     display: flex;
-    padding: 1.5em;
     justify-content: end;
 }
 
@@ -153,4 +156,86 @@ body {
     background-color: transparent;
     color: var(--Almost-Black);
     cursor: pointer;
+}
+
+/*   List items   */
+.sidebar-list {
+    font-size: 1em;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 2em 0;
+}
+
+.features, .company {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 40%;
+    gap: 1em;
+    cursor: pointer;
+}
+
+/*   Arrows   */
+.features-arrow, .company-arrow {
+    transform: rotate(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.arrow-opened {
+    transform: rotate(180deg);
+}
+
+ .features-list, .company-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-height: 0;
+    overflow: hidden;
+
+    transition: all 0.3s ease-in;
+}
+
+.features-list-opened, .company-list-opened {
+    padding: 1em;
+    max-height: 200px;
+}
+
+.features-list li {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.features-list img {
+    width: 10%;
+    margin: 0 1em;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    margin: 1em 0;
+    cursor: pointer;
+}
+
+.register-btn {
+    display: block;
+    font-family: var(--font);
+    color: var(--Medium-Gray);
+    width: 100%;
+    padding: 1em;
+    border: 1px solid var(--Medium-Gray);
+    background-color: transparent;
+    border-radius: 1em;
+    cursor: pointer;
+
+    transition: all 0.3s ease-in;
+}
+
+.register-btn:hover {
+    background: var(--Almost-Black);
+    color: var(--Almost-White);
 }
