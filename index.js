@@ -21,6 +21,7 @@ closeBtn.addEventListener('click', () => {
   sidebar.classList.remove("sidebar-container-shown");
 });
 
+
 /*=====Elements functionalities=====*/
 /*  When we click on the modal, we also want to close it  */
 modal.addEventListener('click', () => {
