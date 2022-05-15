@@ -19,7 +19,7 @@ body {
     width: 100vw;
     font-family: var(--font);
     color: var(--Almost-White);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /*   Main Navbar   */
@@ -42,6 +42,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    gap: 1em;
     width: 100%;
 }
 
@@ -52,6 +53,9 @@ body {
 
 .mobile-hero {
     width: 100%;
+    max-width: 450px;
+    display: block;
+    margin: auto;
 }
 
 /*   Info Section   */
@@ -62,6 +66,8 @@ body {
     gap: 1em;
 
     padding: 2.5em 1em;
+    max-width: 700px;
+    margin: auto;
 }
 
 .info-container h2 {
@@ -110,6 +116,7 @@ body {
 .brands-list img {
     display: block;
     width: 20%;
+    max-width: 75px;
 }
 
 /*   Sidebar   */
@@ -213,6 +220,17 @@ body {
     padding: 1em;
     max-height: 200px;
     position: absolute;
+    background: var(--Almost-White);
+    border-radius: 0.5em;
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.25);
+}
+
+.featuresDesk-list-opened {
+    margin: 1em -2em;
+}
+
+.companyDesk-list-opened {
+    margin: 1em -0.25em;
 }
 
 .features-list li {
@@ -255,18 +273,14 @@ h3 {
     color: var(--Almost-White);
 }
 
-/*   Navbar on desktop   */
-.navbar-container {
+/*   Hidding Desktop Classes  */
+.navbar-container, .desktop-hero {
     display: none;
 }
 
 /*   Desktop   */
 @media only screen and (min-width: 1024px) {
-    .hamburger-btn, .close-btn-bar {
-        display: none;
-    }
-
-    .sidebar-container-hidden {
+    .hamburger-btn, .close-btn-bar, .mobile-hero, .sidebar-container-hidden {
         display: none;
     }
 
@@ -279,22 +293,66 @@ h3 {
         height: min-content;
     }
 
+    .main-section {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10em;
+    }
+
     .sidebar-list {
         flex-direction: row;
         padding: 0;
     }
 
     .login-div {
-        /* width: 50%; */
         display: flex;
         gap: 2em;
-    }
-
-    .login-div h3 {
-        /* width: 10%; */
     }
 
     .register-btn {
         padding: 1em 3em;
     }
+
+    .info-container {
+        margin: 0;
+        order: 0;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        gap: 2em;
+        padding: 0 1em;
+        align-self: stretch;
+    }
+
+    .info-container h2 {
+        font-size: 4em;
+        text-align: left;
+        color: var(--Almost-Black);
+    }
+
+    .info-container p {
+        text-align: left;
+    }
+
+    .brands-list {
+        justify-content: space-between;
+    }
+
+    .img-container {
+        order: 1;
+        width: 50%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .desktop-hero {
+        display: block;
+        width: 100%;
+        max-width: 500px;
+    }
+
+
 }
