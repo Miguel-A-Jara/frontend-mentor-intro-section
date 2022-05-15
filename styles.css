@@ -19,7 +19,14 @@ body {
     width: 100vw;
     font-family: var(--font);
     color: var(--Almost-White);
-    /* overflow: hidden; */
+    overflow: hidden;
+}
+
+button, button:active {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
 }
 
 /*   Main Navbar   */
@@ -29,12 +36,6 @@ body {
     align-items: center;
     padding: 1em 2em;
     color: var(--Almost-Black);
-}
-
-.hamburger-btn {
-    border: none;
-    background: transparent;
-    cursor: pointer;
 }
 
 /*   Main Section   */
@@ -47,10 +48,6 @@ body {
 }
 
 /*   Image Section   */
-.img-container {
-    width: 100%;
-}
-
 .mobile-hero {
     width: 100%;
     max-width: 450px;
@@ -92,9 +89,6 @@ body {
 }
 
 .btn-container button {
-    border: none;
-    cursor: pointer;
-    
     font-size: 1em;
     font-weight: 700;
     font-family: var(--font);
@@ -161,10 +155,7 @@ body {
 }
 
 .close-btn-bar button {
-    border: none;
-    background-color: transparent;
     color: var(--Almost-Black);
-    cursor: pointer;
 }
 
 /*   List items   */
@@ -187,7 +178,8 @@ body {
 }
 
 /*   Arrows   */
-.features-arrow, .company-arrow {
+.features-arrow, .company-arrow,
+.featuresDesk-arrow, .companyDesk-arrow {
     transform: rotate(0);
     transition: transform 0.3s ease-in-out;
 }
@@ -207,13 +199,13 @@ body {
     transition: all 0.3s ease-in;
 }
 
-.featuresDesk-list, .companyDesk-list {
-    position: absolute;
-}
-
 .features-list-opened, .company-list-opened{
     padding: 1em;
     max-height: 200px;
+}
+
+.featuresDesk-list, .companyDesk-list {
+    position: absolute;
 }
 
 .featuresDesk-list-opened, .companyDesk-list-opened {
@@ -261,9 +253,7 @@ h3 {
     width: 100%;
     padding: 1em;
     border: 1px solid var(--Medium-Gray);
-    background-color: transparent;
     border-radius: 1em;
-    cursor: pointer;
 
     transition: all 0.3s ease-in;
 }
